@@ -1,0 +1,103 @@
+<html>
+
+<head>
+    <title>
+        Game
+    </title>
+    <link rel="stylesheet" type="text/css" href="x.css">
+    <!-- <script type="text/javascript" src="x.js"></script> -->
+    <script type="text/javascript">
+	    function onloadHandler() {
+		    var cells = document.getElementsByTagName('td');
+			console.log('cells');
+			console.log(cells);
+			numBlueCells = 8;
+			numRedCells = 9;
+			numBlackCells = 1;
+
+			var i = 0;
+			var random = 0;
+
+			console.log('1');
+			cells[0].style.backgroundColor = 'blue';
+			console.log('1.5');
+			while(i < numBlueCells){
+				console.log('blue');
+				random = Math.floor(Math.random() * 25);
+				console.log(random);
+				if (cells[random].style.backgroundColor == 'blue' || cells[random].style.backgroundColor == 'black' || cells[random].style.backgroundColor == 'red'){
+					
+				}
+				else{
+					cells[random].style.backgroundColor = 'blue';
+					i++;
+				}
+			}
+			console.log('2');
+			i = 0;
+			while(i < numRedCells){
+				random = Math.floor(Math.random() * 25);
+				if (cells[random].style.backgroundColor == 'blue' || cells[random].style.backgroundColor == 'black' || cells[random].style.backgroundColor == 'red'){
+				}
+				else{
+					cells[random].style.backgroundColor = 'red';
+					i++;
+				}
+			}
+			i = 0;
+			while(i < numBlackCells){
+				random = Math.floor(Math.random() * 25);
+				if (cells[random].style.backgroundColor == 'blue' || cells[random].style.backgroundColor == 'black' || cells[random].style.backgroundColor == 'red'){
+				}
+				else{
+					cells[random].style.backgroundColor = 'black';
+					i++;
+				}
+			}
+
+
+	    }
+</script> 
+</head>
+
+<body onload="onloadHandler()">
+    <table style="width:600px; height: 600px">
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td ></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+  <tr>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+    <td></td>
+  </tr>
+</table>
+</body>
+
+</html>
